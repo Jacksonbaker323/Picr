@@ -1,4 +1,17 @@
-<body>
+{% extends "Picr/Base.html" %}
 
-This is some stuff 
-</body>
+
+{% block content %}
+
+<div class="jumbotron">
+        <h2>Upload an image!</h2>
+        <form class="form-signin" action="/submitted/" method="get">
+        <input type="text" class="input-block-level" placeholder="Image URL" name="image">
+        <input type="text" class="input-block-level" placeholder="Tags (Separated by spaces)" name="tags">
+        <button class="btn btn-large btn-primary" type="submit">Upload</button>
+      </form>
+      <a class="btn btn-large btn-success" href="/gallery">View the gallery</a>
+      </div>
+
+
+{% endblock content %}

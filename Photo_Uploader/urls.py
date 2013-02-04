@@ -7,6 +7,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'Picr.views.home', name='home'),
+    url(r'^gallery/', 'Picr.views.gallery', name='gallery'),
+    url(r'^submitted/', 'Picr.views.submitted', name='submitted'),
     #url(r'^gallery/', Photo_Uploader.views.)
     url(r'^admin/', include(admin.site.urls)),
 )
