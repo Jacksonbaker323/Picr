@@ -1,0 +1,13 @@
+{% extends "Picr/base.html" %}
+
+{% block content %}
+
+<p> <h1 class="text-success">Thanks for submitting an image </h1>  </p>
+
+<p> Image: <img src="/Images/{{local_filename}}.{{filename_extension}}"/></p>
+
+<p> Tags: {{tags}} </p>
+
+<p> Filename: {{local_filename}}.{{filename_extension}} </p>
+
+{% endblock content%}
