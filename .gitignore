@@ -1,4 +1,4 @@
 *.pyc
 *.db
 *.DS_Store
-*Picr/Images/*
+Images/*
