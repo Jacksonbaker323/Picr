@@ -4,10 +4,13 @@
 
 <p> <h1 class="text-success">Thanks for submitting an image </h1>  </p>
 
-<p> Image: <img src="/Images/{{local_filename}}.{{filename_extension}}"/></p>
+<p><div class="thumbnail span4"> Image: <img src="/Images/{{local_filename}}.{{filename_extension}}"/> </div></p>
 
 <p> Tags: {{tags}} </p>
 
 <p> Filename: {{local_filename}}.{{filename_extension}} </p>
+
+<p> <a href="../"> Upload another image </a> </p>
+<p> <a href="../gallery"> Go to the gallery </a> </p>
 
 {% endblock content%}

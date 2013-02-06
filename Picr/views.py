@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response, render
 import time, uuid, os, datetime
 
 from Picr.models import Image
+from Picr.custom_objects import image_obj
 
 import urllib2
 
@@ -53,4 +54,21 @@ def submitted(request):
 
 
 def gallery(request):
-	return render_to_response('Picr/gallery.html')
+
+# Write a custom class to hold the image data
+
+
+	gallery_dict = []
+
+	list = Image.objects.all()
+
+	for x in list:
+		item = image_obj(x.image_filename, x.image_tags, x.image_upload_date)
+		gallery_dict.append(item)
+
+
+	context = {'gallery_dict' : gallery_dict}
+	return render_to_response('Picr/gallery.html', context)
+
+
+

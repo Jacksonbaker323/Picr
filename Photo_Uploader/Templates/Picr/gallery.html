@@ -1,25 +1,18 @@
-{% block styles %}
-
-<style>
-ul
-{
-    list-style-type: none;
-}
-</style>
-
-{% endblock styles %}
-
-
+{% extends "Picr/Base.html" %}
 {% block content %}
 
-<ul class="thumbnails">
-  <li class="span4">
+{% for x in gallery_dict %}
+<ul class="thumbnails span4">
+  <li>
     <div class="thumbnail">
-      <img src="https://www.google.com/images/srpr/logo3w.png" alt="">
-      <h3>Filename</h3>
-      <p>Tags</p>
+      <img src="/Images/{{x.image_filename}}" alt="">
+      <p>{{x.image_tags}}</p>
     </div>
   </li>
 </ul>
+
+
+{% endfor %}
+
 
 {% endblock content %}
