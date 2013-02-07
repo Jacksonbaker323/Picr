@@ -1,0 +1,23 @@
+{% extends "Picr/Base.html" %}
+
+{% block content %}
+
+<p> <h1 class="text-success">Search results based on tags: {{tags}} </h1>  </p>
+
+{% if error %}
+
+<p> No search terms were submitted </p>
+
+{% endif %}
+
+{% for images in search_results %}
+
+<p><div class="thumbnail span4"> Image: <img src="/Images/{{images.image_filename}}"/> </div></p>
+
+{% endfor %}
+
+
+<p> <a href="../"> Upload an image </a> </p>
+<p> <a href="../gallery"> Go to the gallery </a> </p>
+
+{% endblock content%}
