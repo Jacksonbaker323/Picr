@@ -71,4 +71,19 @@ def gallery(request):
 	return render_to_response('Picr/gallery.html', context)
 
 
+def search(request):
+	
+	if request.GET['search'] == '':
+		context = {'error' : "No search tags submitted"}
+		return render_to_response('Picr/search.html', context)
+	else:
+		tags = request.GET['search']
+		
+		search_results = Image.objects.filter(image_tags__contains=tags)
+		
+		context = {'tags' : tags, 'search_results' : search_results}
+	
+		return render_to_response('Picr/search.html', context)
+
+
 
