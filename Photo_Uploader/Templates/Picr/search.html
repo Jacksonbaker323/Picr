@@ -12,7 +12,7 @@
 
 {% for images in search_results %}
 
-<p><div class="thumbnail span4"> Image: <img src="/Images/{{images.image_filename}}"/> </div></p>
+<p><div class="thumbnail span4"> Image: <img src="/Images/{{images.image_filename}}"/> {{images.image_tags}}</div></p>
 
 {% endfor %}
 

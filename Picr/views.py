@@ -84,7 +84,10 @@ def search(request):
 			list = Image.objects.filter(image_tags__contains=tag)
 			for item in list:
 				x = image_obj(item.image_filename, item.image_tags, item.image_upload_date)
-				search_results.append(x)
+				if search_results.count(x) >= 1:
+					break
+				else:
+					search_results.append(x)
 		
 		
 		
