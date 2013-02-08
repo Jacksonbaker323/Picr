@@ -1,2 +1,2 @@
-Bound the image in the submitted.html
-Create a gallery
+Keep search from presenting the same image twice.
+Formatting of the search, submitted, and gallery pages.

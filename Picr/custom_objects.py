@@ -4,4 +4,3 @@ class image_obj:
 		self.image_tags = image_tags
 		self.image_upload_date = image_upload_date
 
-

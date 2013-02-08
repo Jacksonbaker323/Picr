@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<p> <h1 class="text-success">Search results based on tags: {{tags}} </h1>  </p>
+<p> <h1 class="text-success">Search results based on tags: {% for tag in tags %} {{tag}} {% endfor %} </h1>  </p>
 
 {% if error %}
 

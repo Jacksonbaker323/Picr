@@ -78,8 +78,16 @@ def search(request):
 		return render_to_response('Picr/search.html', context)
 	else:
 		tags = request.GET['search']
+		tags = tags.split(" ")
+		search_results = []
+		for tag in tags:
+			list = Image.objects.filter(image_tags__contains=tag)
+			for item in list:
+				x = image_obj(item.image_filename, item.image_tags, item.image_upload_date)
+				search_results.append(x)
 		
-		search_results = Image.objects.filter(image_tags__contains=tags)
+		
+		
 		
 		context = {'tags' : tags, 'search_results' : search_results}
 	
