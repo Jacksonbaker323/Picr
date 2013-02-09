@@ -1,11 +1,11 @@
 # Imports
-
+import os
 from django.shortcuts import render_to_response, render
-import time, uuid, os, datetime
 from Picr.models import Image
 from Picr.custom_objects import image_obj
 import urllib2
-
+import uuid
+import datetime
 
 
 #Main page
@@ -94,6 +94,3 @@ def search(request):
 #Get the data for the page
 		context = {'tags' : tags, 'search_results' : search_results}
 		return render_to_response('Picr/search.html', context)
-
-
-
